@@ -1,0 +1,33 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("appointmentForm");
+  const tableBody = document.querySelector("#appointmentTable tbody");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("patientName").value;
+    const doctor = document.getElementById("doctor").value;
+    const date = document.getElementById("date").value;
+    const time = document.getElementById("time").value;
+
+    if (name && doctor && date && time) {
+      const row = document.createElement("tr");
+
+      row.innerHTML = `
+        <td>${name}</td>
+        <td>${doctor}</td>
+        <td>${date}</td>
+        <td>${time}</td>
+        <td><button class="delete-btn">Delete</button></td>
+      `;
+
+      row.querySelector(".delete-btn").addEventListener("click", () => {
+        row.remove();
+      });
+
+      tableBody.appendChild(row);
+      
+      form.reset();
+    }
+    });
+    });
