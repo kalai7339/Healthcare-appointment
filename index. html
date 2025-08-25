@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centralized Healthcare Appointment Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Centralized Healthcare Appointment Management</h1>
+    <p>Using Relational Databases (Demo)</p>
+  </header>
+
+  <main>
+    <!-- Appointment Form -->
+    <section class="form-section">
+      <h2>Book an Appointment</h2>
+      <form id="appointmentForm">
+        <label for="patientName">Patient Name:</label>
+        <input type="text" id="patientName" required>
+
+        <label for="doctor">Select Doctor:</label>
+        <select id="doctor" required>
+          <option value="">--Choose--</option>
+          <option value="Dr. Smith">Dr. Smith (Cardiology)</option>
+          <option value="Dr. Johnson">Dr. Johnson (Dermatology)</option>
+          <option value="Dr. Patel">Dr. Patel (Orthopedics)</option>
+        </select>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" required>
+
+        <label for="time">Time:</label>
+        <input type="time" id="time" required>
+
+        <button type="submit">Book Appointment</button>
+      </form>
+    </section>
+
+    <!-- Appointment List -->
+    <section class="list-section">
+      <h2>Scheduled Appointments</h2>
+      <table id="appointmentTable">
+        <thead>
+          <tr>
+            <th>Patient</th>
+            <th>Doctor</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Appointments will appear here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Centralized Healthcare System</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
